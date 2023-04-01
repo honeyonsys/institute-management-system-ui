@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="assets/css/color_skins.css">
 </head>
 <body class="theme-blush">
-    
+    <div class="navbar"></div>
 <section class="content">
     <div class="block-header">
         <div class="row">
@@ -81,13 +81,13 @@
                                     <input type="text" class="datetimepicker form-control" placeholder="Date of Birth">
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-12">                                
+                            <!-- <div class="col-md-3 col-sm-12">                                
                                 <select class="form-control show-tick">
                                     <option value="">-- Gender --</option>
                                     <option value="10">Male</option>
                                     <option value="20">Female</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <!-- <div class="col-md-3 col-sm-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Department">
@@ -108,11 +108,11 @@
                                     <input type="text" class="form-control" placeholder="Enter Your Email">
                                 </div>
                             </div>
-                            <!-- <div class="col-md-4 col-sm-12">
+                            <div class="col-md-4 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Website URL">
+                                    <input type="text" class="form-control" placeholder="Address">
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <form action="https://thememakker.com/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
                                     <div class="dz-message">
@@ -255,4 +255,9 @@
 
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
 <script src="assets/js/pages/forms/basic-form-elements.js"></script>
+<script>
+      $(document).ready(function() {
+            $(".navbar").load("top-left-rightnavbar.html");
+        });
+</script>
 </html>
