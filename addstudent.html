@@ -1,0 +1,210 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+<title>:: Oreo Bootstrap4 Admin ::</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+<!-- Dropzone Css -->
+<link href="assets/plugins/dropzone/dropzone.css" rel="stylesheet">
+<link href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+<link href="assets/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+<link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
+<link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css" />
+
+<!-- Custom Css -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+</head>
+
+<body class="theme-blush">
+
+<div id="commonbars"></div>
+
+<!-- Main Content -->
+<section class="content profile-page">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Add Student
+                <small class="text-muted">Welcome to Oreo</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <button class="btn btn-white btn-icon btn-round float-right m-l-10" type="button">
+                    <i class="zmdi zmdi-plus"></i>
+                </button>
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Student</a></li>
+                    <li class="breadcrumb-item active">Add</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Basic</strong> Information <small>Description text here...</small> </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Phone No.">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Age">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">                                
+                                <select class="form-control show-tick">
+                                    <option value="">-- Gender --</option>
+                                    <option value="10">Male</option>
+                                    <option value="20">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">                                
+                                <select class="form-control show-tick">
+                                    <option value="">-- Department --</option>
+                                    <option value="10">BCA</option>
+                                    <option value="20">MCA</option>
+                                    <option value="20">BCom</option>
+                                    <option value="20">MCom</option>
+                                </select>
+                            </div> 
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Your Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <form action="/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
+                                    <div class="dz-message">
+                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
+                                        <h3>Drop files here or click to upload.</h3>
+                                        <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row clearfix">                            
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <textarea rows="4" class="form-control no-resize" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Account</strong> Information <small>Description text here...</small> </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Jquery Core Js --> 
+<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) --> 
+<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
+
+<script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
+<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+<script src="assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js"></script><!-- USA Map Js -->
+<script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob, Count To, Sparkline Js -->
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/index.js"></script>
+<script src="assets/js/pages/common.js"></script>
+</body>
+</html>
