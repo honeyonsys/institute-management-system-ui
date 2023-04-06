@@ -22,8 +22,24 @@
 <link rel="stylesheet" href="assets/css/color_skins.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+
 </head>
 <body class="theme-blush">
+    <div class="popup_box" id="loader" style="width: 100%;
+    height: 100%;
+    float:left;
+position:absolute;
+z-index:1000;
+top: -40px;
+background-color: rgba(255, 255, 255, 0.8);
+display:none; ">
+
+  
+        <img src="https://media.tenor.com/tsZlEZXGhCIAAAAi/graduation-cap-graduation.gif"  style="margin-left: 30%;" >
+      </div>
+      <!-- suceess message-->
+      
     <div class="navbar"></div>
 <section class="content">
     <div class="block-header">
@@ -45,6 +61,7 @@
             </div>
         </div>
     </div>
+  
     <div class="container-fluid">
         <div class="row clearfix">
 			<div class="col-lg-12 col-md-12 col-sm-12">
@@ -64,22 +81,41 @@
                             </li>
                         </ul> 
 					</div>
+                    
 					<div class="body">
+                        <div class="container" id="message" style="float : left; display: none; ">
+                            <div class="alert alert-success" role="alert" id="message">
+                                <div class="container">
+                                    <div class="alert-icon">
+                                        <i class="zmdi zmdi-thumb-up"></i>
+                                    </div>
+                                    <p >
+                                    <!-- <strong>Well done!</strong> You successfully read this important alert message. -->
+                                    </p> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style>
+                                        <span aria-hidden="true">
+                                            <i class="zmdi zmdi-close" style="margin-top: -17px;"></i>
+                                        </span>
+                                    </button>
+                                </div></div>
+                            </div>
+                        <form id="form">
                         <div class="row clearfix">
+                     
                             <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text" id="firstname" class="form-control" placeholder="First Name">
                                 </div> 
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text"  id="lastname"  class="form-control" placeholder="Last Name">
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-md-3 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text"   id="dob" class="datetimepicker form-control" placeholder="Date of Birth">
                                 </div>
                             </div>
@@ -96,25 +132,26 @@
                                 </div>
                             </div> -->
                             <div class="col-md-3 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text"   id="position" class="form-control" placeholder="Position">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text"   id="phone" class="form-control" placeholder="Phone">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text"  id="email"  class="form-control" placeholder="Enter Your Email">
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-12">
-                                <div class="form-group">
+                                <div class="form-group" id="formreset">
                                     <input type="text"  id="address"  class="form-control" placeholder="Address">
                                 </div>
                             </div>
+                      
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <form action="https://thememakker.com/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
                                     <div class="dz-message">
@@ -184,6 +221,16 @@
 				</div>
 			</div>
 		</div>
+
+        
+
+          <!-- <div  class="overlay_popup"> -->
+            <!-- <div class="popup_box">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif"> -->
+             
+             
+              </div>
+            <!-- </div> -->
         <div class="row clearfix">
 			<div class="col-md-12">
 				<div class="card">
@@ -235,16 +282,19 @@
                                 </div>
                             </div> -->
                             <div class="col-sm-12">
-                                <button id="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+                            <button id="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
                                 <button  class="btn btn-raised btn-round">Cancel</button>
                             </div>
-                        
+                       
                         </div>
                     </div>
 				</div>
 			</div>
 		</div>
     </div>
+</form>
+
+    
 </section>
 
 </body>
@@ -288,18 +338,27 @@
 			      data: JSON.stringify(jsondata),
 			      dataType: "application/json",
 			      beforeSend: function () {
-			      	$('#status').html("Processing...");
+                 
+                   $('#loader').show();
+                   window.scrollTo(0, 0);
+               
+
 			      },
 			      complete: function(resultData) { 
 			      	if(resultData.status == 200) {
 				      	
 				      	console.log(resultData.responseText);
 				      	let jsonRes = JSON.parse(resultData.responseText);
-                        alert(jsonRes["message"]);
+                        // alert(jsonRes["message"]);
 				      	// console.log(jsonRes["message"]);
 				      	// console.log(jsonRes["status"]);
 				      	// console.log(jsonRes["data"]);
+                    
 				      	$('#status').html("Success");
+                          $('#loader').hide();
+                          $('#message').show();
+                          $('#message').children(".alert").children(".container").children("p").text(jsonRes["message"]);
+                       document.getElementById('form').reset();
 				      	
 			      	} else {
 			      		$('#status').html("There is an error");
