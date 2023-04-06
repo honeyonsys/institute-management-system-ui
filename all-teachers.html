@@ -264,10 +264,7 @@
 <script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js --> 
 <script>
     $(document).ready(function() {
-          $(".navbar").load("top-left-rightnavbar.html");
-      });
-      $('#b1').click(function(){
-        // alert("hello");
+        $(".navbar").load("top-left-rightnavbar.html");
         $.ajax({
                 async: true,
                 crossDomain: true,
@@ -278,37 +275,16 @@
                 },
                 beforeSend: function() {
                     // $("#status").html("loading...");
-
-            
                 },
-                complete:  function (responseText) {
-                    console.log(responseText["data"]);
+                complete:  function (res) {
+                    let resObj = JSON.parse(res.responseText);
+                    console.log(resObj['data']);
                 }
-
-//                     let html = "";
-//                 const keys = Object.keys(responseText[0]);
-// html += "<tr>";
-// keys.forEach(element=>{
-//     html += "<td>" + element +"</td>";
-
-// })
-// html += "</tr>";
-//                     responseText.forEach(obj => {
-//                         html += "<tr><td>"+obj["name"]+"</td>";
-//                         html += "<td>"+obj["dob"]+"</td>";
-//                         html += "<td>"+obj["phone"]+"</td>";
-//                         html += "<td>"+obj["address"]+"</td>";
-//                         html += "<td>"+obj["courseId"]+"</td>";
-//                         html += "<td>"+obj["email"]+"</td>";
-                     
-//                         // html += "<td><button class='b1'>edit</button></td>";
-//                         html += "</tr>";
-//                     });
-                
-//                 let tabledata = $("#datatable").html();
-//                 $("#datatable").html(tabledata + html);
-//                 }
             });
-      })
+      
+    });
+      
+        
+      
 </script>
 </html>
