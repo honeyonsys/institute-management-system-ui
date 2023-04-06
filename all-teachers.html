@@ -18,6 +18,7 @@
 </head>
 <body class="theme-blush">
 <div class="navbar"></div>
+
 <section class="content">
     <div class="block-header">
         <div class="row">
@@ -25,6 +26,7 @@
                 <h2>All Professors
                 <small>Welcome to KCW</small>
                 </h2>
+                <div><button id="b1">show databse entries</button></div>
             </div>            
             <div class="col-lg-7 col-md-7 col-sm-12 text-right">
                 <button class="btn btn-white btn-icon btn-round float-right m-l-10" type="button">
@@ -253,6 +255,7 @@
         </div> 
     </div>
 </section>
+<div id="status"></div>
 </body>
 <!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
@@ -263,5 +266,48 @@
     $(document).ready(function() {
           $(".navbar").load("top-left-rightnavbar.html");
       });
+      $('#b1').click(function(){
+        // alert("hello");
+        $.ajax({
+                async: true,
+                crossDomain: true,
+                url: "https://harksh.com/ims/api/teacher_readall.php",
+                method: "GET",
+                headers: {
+                    
+                },
+                beforeSend: function() {
+                    // $("#status").html("loading...");
+
+            
+                },
+                complete:  function (responseText) {
+                    console.log(responseText);}
+
+//                     let html = "";
+//                 const keys = Object.keys(responseText[0]);
+// html += "<tr>";
+// keys.forEach(element=>{
+//     html += "<td>" + element +"</td>";
+
+// })
+// html += "</tr>";
+//                     responseText.forEach(obj => {
+//                         html += "<tr><td>"+obj["name"]+"</td>";
+//                         html += "<td>"+obj["dob"]+"</td>";
+//                         html += "<td>"+obj["phone"]+"</td>";
+//                         html += "<td>"+obj["address"]+"</td>";
+//                         html += "<td>"+obj["courseId"]+"</td>";
+//                         html += "<td>"+obj["email"]+"</td>";
+                     
+//                         // html += "<td><button class='b1'>edit</button></td>";
+//                         html += "</tr>";
+//                     });
+                
+//                 let tabledata = $("#datatable").html();
+//                 $("#datatable").html(tabledata + html);
+//                 }
+            });
+      })
 </script>
 </html>
