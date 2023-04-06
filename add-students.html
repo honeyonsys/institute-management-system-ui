@@ -8,12 +8,10 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-<title>ADD STUDENTS</title>
+<title>:: Oreo University Admin ::</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <!-- Favicon-->
 <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<!--icons-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 <!-- Dropzone Css -->
 <link href="assets/plugins/dropzone/dropzone.css" rel="stylesheet">
 <!-- Bootstrap Material Datetime Picker Css -->
@@ -28,38 +26,32 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/logo.svg" width="48" height="48" alt="logo"></div>
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
         <p>Please wait...</p>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
-
-<div class="addstudent"></div>
-
-
 <section class="content profile-page">
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <h2>ADD STUDENTS
-                <small class="text-muted">WELCOME TO THE COMPUTER SCIENCE DEPARTMENT</small>
+                <h2>Add Student
+                <small class="text-muted">Welcome to Oreo</small>
                 </h2>
             </div>
-            <!-- <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="col-lg-5 col-md-6 col-sm-12">
                 <button class="btn btn-white btn-icon btn-round float-right m-l-10" type="button">
                     <i class="zmdi zmdi-plus"></i>
                 </button>
                 <ul class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i>Icon is missing</a></li>
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Student</a></li>
                     <li class="breadcrumb-item active">Add</li>
                 </ul>
-            </div> -->
+            </div>
         </div>
     </div>
-    <div class="popup" id="loader" style=width:100%;height:100%;float:left;position:absolute;z-index:10;background-color:rgba(0,0,0,0.5);display:none>
-        <img src="assets/images/loading.jpg" style="width: 100%; height: 100%;"></div>
     <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -81,64 +73,60 @@
                     </div>
                     <div class="body">
                         <div class="row clearfix">
-                            
                             <div class="col-lg-6 col-md-12">
-                                <form id="f2">
-                                <div class="form-group" >
-                                    <input type="text" class="form-control"  id="firstname" placeholder="First Name">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="lastname"  placeholder="Last Name">
+                                    <input type="text" class="form-control" placeholder="Last Name">
                                 </div>
                             </div>
                         </div>
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control"  id="phoneno" placeholder="Phone No.">
+                                    <input type="text" class="form-control" placeholder="Phone No.">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="datetimepicker form-control"  id="dob" placeholder="Date of Birth">
+                                    <input type="text" class="datetimepicker form-control" placeholder="Date of Birth">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="age" placeholder="Age">
+                                    <input type="text" class="form-control" placeholder="Age">
                                 </div>
                             </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">                                
+                                <select class="form-control show-tick">
+                                    <option value="">-- Gender --</option>
+                                    <option value="10">Male</option>
+                                    <option value="20">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">                                
+                                <select class="form-control show-tick">
+                                    <option value="">-- Department --</option>
+                                    <option value="10">BCA</option>
+                                    <option value="20">MCA</option>
+                                    <option value="20">BCom</option>
+                                    <option value="20">MCom</option>
+                                </select>
+                            </div> 
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control"  id="gender" placeholder="Gender" value="Female" disabled>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                              
-                                    <select class="form-control show-tick">
-                                        <option>Courses</option>
-                                        <option>BCA</option>
-                                        <option>MSC IT</option>
-                                        <option>PGDCA</option>
-                                        <option>BA(COMPUTER APPLICATION)</option>
-                                        <option>BSC(COMPUTER SCIENCE)</option>
-                                    </select>
-                                
-                            </div>
-                          
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control"  id="email" placeholder="Enter Your Email">
+                                    <input type="text" class="form-control" placeholder="Enter Your Email">
                                 </div>
                             </div>
                         </div>
-                        <div class="row clearfix" style="margin-top: 50px;">
+                        <div class="row clearfix">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <form action="https://thememakker.com/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
-                                    <div class="dz-message" >
-                                        <div class="drag-icon-cph" > <i class="material-icons">touch_app</i> </div>
+                                    <div class="dz-message">
+                                        <div class="drag-icon-cph"> <i class="material-icons">touch_app</i> </div>
                                         <h3>Drop files here or click to upload.</h3>
                                         <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em> </div>
                                     <div class="fallback">
@@ -154,18 +142,64 @@
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <button type="submit" class="btn btn-raised btn-round btn-primary" id="submit">Submit</button>
+                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
                                 <button type="submit" class="btn btn-raised btn-round">Cancel</button>
                             </div>
                         </div>
                     </div>
-                </form>
                 </div>
             </div>
         </div>
-       
-
-       
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2><strong>Account</strong> Information <small>Description text here...</small> </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right slideUp">
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Another action</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Something else</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Confirm Password">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-raised btn-round btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-raised btn-round">Cancel</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Jquery Core Js --> 
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Bootstrap JS and jQuery v3.2.1 -->
@@ -177,69 +211,8 @@
 <!-- Bootstrap Material Datetime Picker Plugin Js --> 
 <script src="assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
-<!-- <script src="assets/bundles/mainscripts.bundle.js"></script>Custom Js -->
+<script src="assets/bundles/mainscripts.bundle.js"></script><!-- Custom Js -->
 <script src="assets/js/pages/forms/basic-form-elements.js"></script>
-<script>
-    $(document).ready(function(){
-        $(".addstudent").load("top-left-rightnavbar.html");
-
-    });
-</script>
-<script>
-  $('#submit').click (function(){
-    // alert("Firstname:"+$('#firstname').val() +"Lastname:"+$('#lastname').val() +
-    //  "Age:"+$('#age').val() + "E-mail:"+$('#email').val() + "Phoneno:"+$('#phoneno').val() + "Date Of Birth:"+$('#dob').val());
-   
-			
-    
-    
-    let jsondata = {
-			    name: $('firstname').val(),
-			    dob:  $('dob').val(),
-			    phone: $('phoneno').val(),
-			    address:$('gender').val() ,
-			    courseId:$('age').val(),
-			    email: $('email').val()
-			    
-			}
-			$.ajax({
-			      type: 'POST',
-			      url: "https://harksh.com/ims/api/student_create.php",
-			      data: JSON.stringify(jsondata),
-			      dataType: "application/json",
-			      beforeSend: function () {
-			      	// $("#status").html("Processing...");
-                    $('#loader').show();
-			      },
-			      complete: function(resultData) { 
-			      	if(resultData.status == 200) {
-				      	
-				      	console.log(resultData.responseText);
-				      	let jsonRes = JSON.parse(resultData.responseText);
-				      	console.log(jsonRes["message"]);
-				      	console.log(jsonRes["status"]);
-				      	console.log(jsonRes["data"]);
-				      	$("#status").html("Success");
-                        document.getElementById("f2").reset();
-        
-                        alert("Data added successfully");
-                        $('#loader').hide();
-                        
-			      	} 
-                    else {
-			      		$("#status").html("There is an error");
-			      	}
-                     
-			      }
-			});
-		
-
-
-  });
-</script>
-
-
-</div>
 </body>
 
 
